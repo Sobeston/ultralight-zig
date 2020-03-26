@@ -4,8 +4,6 @@ const Builder = std.build.Builder;
 pub fn build(b: *Builder) void {
     var exe = b.addExecutable("ultralight-test", "main.zig");
     b.exe_dir = "";
-    exe.build_mode = .ReleaseFast;
-    exe.strip = true;
 
     exe.linkLibC();
 
